@@ -17,6 +17,7 @@ public class Main {
         myAssets.add(new Vehicle("Family SUV", "2020", 34000, "Toyota Highlander", 2020, 45000));
         myAssets.add(new Vehicle("Compact Sedan", "2019", 22000, "Honda Accord", 2019, 67000));
         myAssets.add(new Vehicle("Electric Vehicle", "2025", 61000, "Tesla Model 3", 2025, 3000));
+        myAssets.add(new Cash("Using the special safe", "1965", 3000500,true,245990));
 
         for (int i = 0; i < myAssets.size(); i++) {
             if (myAssets.get(i) instanceof House) {
@@ -25,6 +26,9 @@ public class Main {
             } else if (myAssets.get(i) instanceof Vehicle) {
                 Vehicle vehicle = (Vehicle) myAssets.get(i);
                 System.out.println("Vehicle: " + vehicle.getYear() + " " + vehicle.getMakeModel() + ". Current value: " + vehicle.getValue());
+            }else if (myAssets.get(i) instanceof Cash){
+                Cash cash = (Cash) myAssets.get(i);
+                System.out.println("How much Cash do you have? " + cash.getValue() + " is it under the mattress? " + cash.isUnderMattress());
             }
         }
 

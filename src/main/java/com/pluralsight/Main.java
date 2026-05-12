@@ -21,10 +21,10 @@ public class Main {
         for (int i = 0; i < myAssets.size(); i++) {
             if (myAssets.get(i) instanceof House) {
                 House house = (House) myAssets.get(i);
-                System.out.println("House at " + house.getAddress() + " new appraised value is: " + house.getValue());
+                System.out.println("House at " + house.getAddress() + ". New appraised value is: " + house.getValue());
             } else if (myAssets.get(i) instanceof Vehicle) {
                 Vehicle vehicle = (Vehicle) myAssets.get(i);
-                System.out.println("Vehicle: " + vehicle.getYear() + " " + vehicle.getMakeModel() + " Current value: " + vehicle.getValue());
+                System.out.println("Vehicle: " + vehicle.getYear() + " " + vehicle.getMakeModel() + ". Current value: " + vehicle.getValue());
             }
         }
 
